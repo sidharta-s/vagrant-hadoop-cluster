@@ -11,8 +11,13 @@ $ cd vagrant-hadoop-cluster
 $ export NUM_SLAVES=0 #brings up a single node cluster. defaults to 2 if not specified 
 $ vagrant up 
 ```
-
 Following these steps will bring up a multi-VM (depending on `NUM_SLAVES`) hadoop cluster running YARN and HDFS. Depending on your local hardware and available bandwidth, bringing the cluster up could take a while to complete.
+
+### YARN Dashboard 
+By default, the `master` has the ip `10.245.100.2`. The YARN Dashboard is running at `http://10.245.100.2:8088/`
+
+### HDFS Dashbaord
+The HDFS dashboard is running at `http://10.245.100.2:50070/`
 
 ## Using your own hadoop archive
 If you want to provide your own archive, edit `provision/hadoop-config.sh` and modify `HADOOP_ARCHIVE`. 
