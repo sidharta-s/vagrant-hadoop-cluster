@@ -8,8 +8,8 @@ export HADOOP_ARCHIVE_DIR=hadoop
 #To use a custom archive: copy the archive (with extension .tar.gz) into the HADOOP_ARCHIVE_DIR and change this line
 export HADOOP_ARCHIVE=${HADOOP_ARCHIVE_DIR}/hadoop-2.6.0-SNAPSHOT.tar.gz
 
-export HADOOP_ARCHIVE_FALLBACK=http://mirror.reverse.net/pub/apache/hadoop/common/hadoop-2.5.1/hadoop-2.5.1.tar.gz
-export HADOOP_ARCHIVE_FALLBACK_FILE=hadoop/hadoop-2.5.1.tar.gz
+export HADOOP_ARCHIVE_FALLBACK=http://mirror.reverse.net/pub/apache/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
+export HADOOP_ARCHIVE_FALLBACK_FILE=hadoop/hadoop-2.6.0.tar.gz
 export MR_SCRIPT=test-pi-yarn.sh
 
 if [ ! -f "${HADOOP_ARCHIVE}" ]; then
