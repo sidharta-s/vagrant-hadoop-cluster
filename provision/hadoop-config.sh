@@ -6,7 +6,7 @@ export HADOOP_INSTALL_DIR=/home/vagrant/hadoop/install
 export HADOOP_ARCHIVE_DIR=hadoop
 
 #To use a custom archive: copy the archive (with extension .tar.gz) into the HADOOP_ARCHIVE_DIR and change this line
-export HADOOP_ARCHIVE=${HADOOP_ARCHIVE_DIR}/hadoop-2.6.0-SNAPSHOT.tar.gz
+export HADOOP_ARCHIVE=${HADOOP_ARCHIVE_DIR}/hadoop-2.6.0.tar.gz
 
 export HADOOP_ARCHIVE_FALLBACK=http://mirror.reverse.net/pub/apache/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
 export HADOOP_ARCHIVE_FALLBACK_FILE=hadoop/hadoop-2.6.0.tar.gz
