@@ -2,7 +2,7 @@ set -e
 
 export JDK_DEVEL_PKG_VER=java-1.7.0-openjdk-devel-1.7.0.65-2.5.2.5.fc20
 export JAVA_HOME=/usr/lib/jvm/jre-1.7.0-openjdk.x86_64/
-export HADOOP_INSTALL_DIR=/home/vagrant/hadoop/install
+export HADOOP_INSTALL_DIR=/usr/local/src/hadoop/
 export HADOOP_ARCHIVE_DIR=hadoop
 
 #To use a custom archive: copy the archive (with extension .tar.gz) into the HADOOP_ARCHIVE_DIR and change this line

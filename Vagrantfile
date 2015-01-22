@@ -46,7 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "master" do |config|
     customize_vm config
 
-    config.vm.provision "shell", inline: "/vagrant/provision/provision-master.sh #{$master_ip} #{$num_slave} #{$slave_ips_str}"
+    config.vm.provision "shell", inline: "/vagrant/provision/provision-master.sh #{$master_ip} #{$num_slave} #{$slave_ips_str} /vagrant/provision"
     config.vm.network "private_network", ip: "#{$master_ip}"
     config.vm.hostname = "hadoop-master"
   end
@@ -57,7 +57,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
       slave_index = n+1
       slave_ip = $slave_ips[n]
-      slave.vm.provision "shell", inline: "/vagrant/provision/provision-slave.sh #{$master_ip} #{$num_slave} #{$slave_ips_str} #{slave_ip} #{slave_index}"
+      slave.vm.provision "shell", inline: "/vagrant/provision/provision-slave.sh #{$master_ip} #{$num_slave} #{$slave_ips_str} #{slave_ip} #{slave_index} /vagrant/provision"
       slave.vm.network "private_network", ip: "#{slave_ip}"
       slave.vm.hostname = "hadoop-slave-#{slave_index}"
     end

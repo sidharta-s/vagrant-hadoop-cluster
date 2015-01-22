@@ -1,6 +1,8 @@
 MASTER_IP=$1
 NUM_SLAVES=$2
 SLAVE_IPS=$3
+SCRIPT_DIR=$4
+
 
 MASTER_NAME=hadoop-master
 
@@ -21,7 +23,7 @@ else
 fi
 
 echo "Installing hadoop ..."
-pushd /vagrant/provision
+pushd $SCRIPT_DIR
 source ./hadoop-config.sh
 ./provision-hadoop.sh $MASTER_IP $NUM_SLAVES $SLAVE_IPS
 ./restart-hadoop-master-daemons.sh

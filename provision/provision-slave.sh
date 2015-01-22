@@ -5,7 +5,7 @@ NUM_SLAVES=$2
 SLAVE_IPS=$3
 SLAVE_IP=$4
 SLAVE_INDEX=$5
-
+SCRIPT_DIR=$6
 
 MASTER_NAME=hadoop-master
 SLAVE_NAMES=($(eval echo hadoop-slave-{1..${NUM_SLAVES}}))
@@ -39,7 +39,7 @@ for (( i=0; i<${#SLAVE_NAMES[@]}; i++)); do
 done
 
 echo "Installing hadoop ..."
-pushd /vagrant/provision
+pushd $SCRIPT_DIR
 source ./hadoop-config.sh
 ./provision-hadoop.sh $MASTER_IP $NUM_SLAVES $SLAVE_IPS
 ./restart-hadoop-slave-daemons.sh
